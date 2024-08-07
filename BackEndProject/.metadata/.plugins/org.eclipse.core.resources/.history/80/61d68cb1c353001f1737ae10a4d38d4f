@@ -1,0 +1,5 @@
+package com.app.repositories;
+
+public class AcademicDetails extends JpaRepository<AcademicDetails,Long>{
+
+}

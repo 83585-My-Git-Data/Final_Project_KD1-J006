@@ -1,0 +1,10 @@
+package com.app.services;
+
+import com.app.dto.UserDTO;
+import com.app.entitites.User;
+
+public interface UserService {
+	 User registerUser(UserDTO userDTO);
+	
+
+}

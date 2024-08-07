@@ -1,0 +1,36 @@
+package com.app.services;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.app.daos.UserDao;
+import com.app.dto.UserDTO;
+import com.app.entitites.User;
+import com.app.entitites.UserRole;
+
+@Service
+public class UserServiceImpl implements UserService 
+
+{
+    @Autowired
+	private UserDao userDao;
+    
+    @Autowired
+    private ModelMapper modelmapper;
+    
+	@Override
+	public User registerUser(UserDTO userDTO) {
+		User user = modelmapper.map(userDTO,User.class);
+		//user.setRole(UserRole.valueOf(userDTO.getRole()));
+		
+		return userDao.save(user);
+	}
+
+	@Override
+	public User loginUser(String email, String password) throws Exception {
+		
+		return null;
+	}
+	
+}

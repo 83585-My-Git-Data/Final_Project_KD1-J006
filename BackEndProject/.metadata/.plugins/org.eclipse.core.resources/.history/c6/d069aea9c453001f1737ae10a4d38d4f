@@ -1,0 +1,7 @@
+package com.app.repositories;
+
+import org.springframework.data.jpa.repository.support.JpaRepositoryFactory;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public class AcademicDetails extends JpaRepositoryFactory<>A

@@ -1,0 +1,12 @@
+package com.app.dto;
+
+public class LoginRequestDTO 
+{
+	private String email;
+    private String password;
+    private Long userId;
+    private String firstName;
+    private String lastName;
+    private String role;
+	
+}

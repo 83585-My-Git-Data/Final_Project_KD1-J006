@@ -1,0 +1,62 @@
+package com.app.services;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.app.daos.AcademicDetailsDao;
+import com.app.daos.UserDao;
+import com.app.dto.LoginRequestDTO;
+import com.app.dto.RegistrationRequestDTO;
+import com.app.dto.UserDTO;
+import com.app.entitites.User;
+import com.app.entitites.UserRole;
+
+@Service
+public class UserServiceImpl implements UserService 
+
+{
+    @Autowired
+	private UserDao userDao;
+    
+    @Autowired
+    private AcademicDetailsDao academicDetailsDao;
+    
+    @Autowired
+    private ModelMapper modelmapper;
+    
+	@Override
+	public User registerUser(UserDTO userDTO) {
+		User user = modelmapper.map(userDTO,User.class);
+		//user.setRole(UserRole.valueOf(userDTO.getRole()));
+		
+		return userDao.save(user);
+	}
+	
+	 @Override
+	    public UserDTO register(RegistrationRequestDTO registrationRequest) {
+	        User user = modelmapper.map(registrationRequest.getUserDTO(), User.class);
+	        User savedUser = userRepository.save(user);
+
+	        AcademicDetails academicDetails = modelMapper.map(registrationRequest.getAcademicDetailsDTO(), AcademicDetails.class);
+	        academicDetails.setAlumni(savedUser); // Assuming the relationship
+	        academicDetailsRepository.save(academicDetails);
+
+	        return modelMapper.map(savedUser, UserDTO.class);
+
+	@Override
+	public UserDTO login(LoginRequestDTO loginRequest) {
+		User user = userDao.findByEmailAndPassword(loginRequest.getEmail(), loginRequest.getPassword())
+                .orElseThrow(() -> new RuntimeException("Invalid email or password"));
+		return modelmapper.map(user, UserDTO.class);
+	}
+
+	@Override
+	public UserDTO register(RegistrationRequestDTO registrationRequest) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+}

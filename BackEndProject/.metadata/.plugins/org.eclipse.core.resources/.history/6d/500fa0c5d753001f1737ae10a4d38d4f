@@ -1,0 +1,26 @@
+package com.app.dto;
+
+import java.time.LocalDate;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
+@to
+public class AlumniDTO
+{
+	    private String batch;
+	    private String address;
+	    private String course;
+	    private String jobRole;
+	    private LocalDate dob;
+	    private String experienceLevel;
+	    private String gender;
+	    private String placementStatus;
+	    private String companyName;
+}

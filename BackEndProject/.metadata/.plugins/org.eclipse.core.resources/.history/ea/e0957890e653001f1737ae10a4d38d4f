@@ -1,0 +1,36 @@
+package com.app.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.app.dto.UserDTO;
+import com.app.entitites.User;
+import com.app.services.AlumniService;
+import com.app.services.UserService;
+
+@RestController
+@RequestMapping("/api/users")
+public class UserController {
+
+	 @Autowired
+	 private UserService userService;
+	 
+	 @PostMapping("/register")
+	  public ResponseEntity<User> registerUser(@RequestBody UserDTO userDTO) {
+	  User user = userService.registerUser(userDTO);
+	  return ResponseEntity.ok(user);
+	   }
+	 @PostMapping("/login")
+	  public ResponseEntity<?> loginUser(@RequestBody UserDTO userDTO) {
+	   try {
+	        User user = userService.loginUser(userDTO.getEmail(), userDTO.getPassword());
+	        return ResponseEntity.ok(user);
+	        }catch (Exception e) {
+	           return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(e.getMessage());
+	        }
+}
