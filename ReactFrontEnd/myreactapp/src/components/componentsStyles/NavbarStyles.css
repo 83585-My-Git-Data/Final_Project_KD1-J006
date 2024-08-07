@@ -1,0 +1,32 @@
+.My-Navbar{
+    color: white;
+} 
+
+
+.NavBar-items{
+    display: flex;
+    justify-content: space-around;
+}
+
+.button-container{
+   
+    /* align-items: center; */
+    /* display: flex;
+    justify-content: center; */
+}
+
+.logout-button{
+    
+    height: 40px;
+    
+    
+}
+
+
+
+.logOutText{
+    padding-bottom: 50px;
+    
+    /* padding-top: -80px; */
+    /* margin-bottom: 30px; */
+}
