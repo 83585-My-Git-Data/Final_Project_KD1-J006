@@ -34,7 +34,24 @@ public class AlumniServiceImpl implements AlumniService {
 		return alumniDao.save(alumni);
 	}
 	
-	
+	@Override
+	public List<AlumniUserDTO> searchByName(String name) {
+		 List<AlumniUserDTO> alumniUserList = alumniDao.findAlumniUserByName(name);
+	        return alumniUserList;
+	}
+
+	@Override
+	public List<AlumniUserDTO> searchByCompanyName(String companyName) {
+		List<AlumniUserDTO> alumniUserList = alumniDao.findAlumniUserByCompanyName(companyName);
+        return alumniUserList;
+	}
+
+	@Override
+	public List<AlumniUserDTO> searchByJobRole(String jobRole) {
+		 List<AlumniUserDTO> alumniUserList = alumniDao.findAlumniUserByJobRole(jobRole);
+	        return alumniUserList;
+	}
+
 	
 	}
     
