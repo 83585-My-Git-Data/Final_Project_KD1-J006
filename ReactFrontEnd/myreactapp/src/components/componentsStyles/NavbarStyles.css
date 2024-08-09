@@ -1,32 +1,44 @@
-.My-Navbar{
+.navbar {
+    background-color: #343a40; /* Adjust the background color as needed */
     color: white;
-} 
-
-
-.NavBar-items{
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Ensure the navbar is above other content */
+    width: 100%;
+    
+  }
+  
+  .navbar-brand {
+    color: white;
+    font-size: 1.5rem; /* Adjust the font size as needed */
+  }
+  
+  .navbar-nav {
     display: flex;
-    justify-content: space-around;
-}
-
-.button-container{
-   
-    /* align-items: center; */
-    /* display: flex;
-    justify-content: center; */
-}
-
-.logout-button{
-    
-    height: 40px;
-    
-    
-}
-
-
-
-.logOutText{
-    padding-bottom: 50px;
-    
-    /* padding-top: -80px; */
-    /* margin-bottom: 30px; */
-}
+    align-items: center;
+  }
+  
+  .nav-item {
+    margin-left: 10px; /* Adds space between items */
+  }
+  
+  .nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px; /* Adjust padding to control the spacing and size */
+  }
+  
+  .logout-button {
+    padding: 6px 12px; /* Adjust padding to control the size */
+  }
+  
+  .nav-link.text-white:hover,
+  .navbar-brand:hover {
+    color: #ccc; /* Lightens the color on hover */
+  }
+  
+  .btn-danger {
+    background-color: #dc3545; /* Bootstrap red for danger button */
+    border-color: #dc3545;
+  }
+  
