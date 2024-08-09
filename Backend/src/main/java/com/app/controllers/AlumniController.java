@@ -29,6 +29,22 @@ public class AlumniController {
     return ResponseEntity.ok(alumni);
     }
 	
+     @GetMapping("/search/name")
+	  public List<AlumniUserDTO> searchByName(@RequestParam(value = "name") String name) {
+	        return alumniService.searchByName(name);
+	    }
+
+	 @GetMapping("/search/company")
+	  public List<AlumniUserDTO> searchByCompanyName(@RequestParam(value = "companyName") String companyName) {
+	        return alumniService.searchByCompanyName(companyName);
+	    }
+
+	 @GetMapping("/search/jobRole")
+	  public List<AlumniUserDTO> searchByJobRole(@RequestParam(value = "jobRole") String jobRole) {
+	        return alumniService.searchByJobRole(jobRole);
+	    }
 	
 
+	
+   
 }
