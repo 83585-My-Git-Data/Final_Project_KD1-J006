@@ -9,5 +9,5 @@ public interface AlumniService
 	List<AlumniUserDTO> searchByName(String name);
 	List<AlumniUserDTO> searchByCompanyName(String companyName);
 	List<AlumniUserDTO> searchByJobRole(String jobRole);
-
+	AlumniDTO updateAlumni(Long id, AlumniDTO alumniDTO);
 }
