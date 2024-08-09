@@ -55,12 +55,14 @@
     width: 100vh;
   }
   
-  .main-content {
-    width: 80%;
-    height: 300px;
-    background-color: #e0e0e0;
-    margin-bottom: 20px;
-  }
+  .car-main-container{
+    /* align-items: center; */
+    /* text-align: center; */
+    /* margin: 0 auto; */
+    
+    
+
+} 
   
   .newsroom, .events {
     width: 40%;
