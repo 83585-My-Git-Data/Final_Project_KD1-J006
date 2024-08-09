@@ -12,6 +12,10 @@ function Register() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+  const [contact, setContact] = useState('');
+  const [role, setRole] = useState('Alumni');
+
+
 
   // get the navigation hook
   const navigate = useNavigate();
@@ -30,13 +34,19 @@ function Register() {
       toast.error('please confirm the password');
     } else if (password !== confirmPassword) {
       toast.error('password does not match');
-    } else {
+    } else if (contact.length == 0) {
+      toast.error('please enter Contact number');
+    } else if (role.length == 0) {
+      toast.error('please enter Role');
+    }
+    
+    else {
       // Here we assume the register service is successful
       // const result = await register(firstName, lastName, email, password);
       // if (result['status'] === 'success') {
       dispatch(increment());
-      toast.success('Successfully registered a new user');
-      navigate('/login');
+      // toast.success('Successfully registered a new user');
+      navigate('/register2');
       // } else {
       //   toast.error(result['error']);
       // }
@@ -91,11 +101,38 @@ function Register() {
               />
             </div>
             <div className='mb-3'>
+              <label htmlFor=''>Contact</label>
+              <input
+                onChange={(e) => setContact(e.target.value)}
+                type='text'
+                className='form-control'
+                // pattern='\d{10}'
+                title='Please enter a 10-digit phone number'
+                placeholder='Enter 10-digit phone number'
+              />
+            </div>
+
+            <div className='mb-3'>
+              <label htmlFor='role'>Role</label>
+              <div>
+                <select
+                  onChange={(e) => setRole(e.target.value)}
+                  className='form-control selectpicker dropdown'
+                  id='role'
+                  value='Alumni' // Set default value to 'Alumni'
+                  disabled // Disable the dropdown to prevent user changes
+                >
+                  <option value='Alumni'>Alumni</option>
+                </select>
+              </div>
+            </div>
+
+            <div className='mb-3'>
               <div>
                 Already have an account? <Link to='/login'>Login here</Link>
               </div>
               <button onClick={onRegister} className='btn btn-success mt-2'>
-                Register
+                Next
               </button>
             </div>
           </div>

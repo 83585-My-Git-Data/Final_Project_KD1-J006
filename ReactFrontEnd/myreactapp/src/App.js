@@ -14,6 +14,11 @@ import AboutUs from './screens/AboutUs'
 import Members from './screens/Members'
 import Events from './screens/Events'
 import Gallery from './screens/Gallery'
+import Register2 from './screens/Register2'
+import Register3 from './screens/Register3'
+import Engage from './screens/Engage'
+import JobPortal from './screens/JobSection'
+import MyJobsSection from './screens/MyJobSection'
 
 
 function App() {
@@ -30,6 +35,16 @@ function App() {
         <Route path='members' element={<Members />} />
         <Route path='events' element={<Events />} />
         <Route path='gallery' element={<Gallery />} />
+        <Route path='register2' element={<Register2 />} />
+        <Route path='register3' element={<Register3 />} />
+        <Route path='engage' element={<Engage />} />
+        <Route path='jobportal' element={<JobPortal />} />
+        <Route path='myjobsection' element={<MyJobsSection />} />
+
+
+
+
+
 
 
         
