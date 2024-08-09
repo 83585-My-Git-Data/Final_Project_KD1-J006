@@ -17,6 +17,6 @@ public interface EventService {
 
     List<EventDTO> getAllEvents();
 
-
-   
+    
+  
 }
