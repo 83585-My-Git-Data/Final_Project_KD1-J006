@@ -1,147 +1,59 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 import './componentsStyles/NavbarStyles.css';
 
 function Navbar() {
   return (
-    <nav style={{width:'100'}}
-      className='navbar  navbar-expand-lg bg-body-tertiary bg-primary container-fluid  py-3'>
-      <div className=' My-Navbar text-white container-fluid bg-primary py-2'>
-        <a className='navbar-brand ' href='#'>
+    <nav className='navbar navbar-expand-lg bg-dark bg-gradient py-3' >
+      <div className='container-fluid'>
+        {/* <Link className='navbar-brand text-white' to='/'>
           MyAlumniPortal
-        </a>
-
-        <div className='collapse navbar-collapse ' id='navbarSupportedContent'>
-          <div className='navbar-nav me-auto mb-2 mb-lg-0 '>
-            <div className='NavBar-items d-flex  justify-content-evenly'>
-              <div className='d-flex '>
-            <span className='nav-item'>
-              <Link
-                to='/home'
-                className='nav-link text-white'
-                aria-current='page'
-                href='#'
-              >
-                Home
-              </Link>
-            </span>
-            <span className='nav-item'>
-              <Link
-                to='/aboutus'
-                className='nav-link text-white'
-                aria-current='page'
-                href='#'
-              >
-                About Us
-              </Link>
-            </span>
-            <span className='nav-item'>
-              <Link
-                to='/members'
-                className='nav-link text-white'
-                aria-current='page'
-                href='#'
-              >
-                Members
-              </Link>
-            </span>
+        </Link> */}
+        <div className='ms-2'>
+        <img src="./AlumniAssociationBgless.png" style={{ width: 60, height: 70}} alt="" />
+        </div>
+        
+        <div className='collapse navbar-collapse' id='navbarSupportedContent'>
+          <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
             <li className='nav-item'>
-              <Link
-                to='/events'
-                className='nav-link text-white'
-                aria-current='page'
-                href='#'
-              >
-                Events
-              </Link>
+              <Link to='/home' className='nav-link text-white'>Home</Link>
             </li>
-
             <li className='nav-item'>
-              <Link
-                to='/gallery'
-                className='nav-link text-white'
-                aria-current='page'
-                href='#'
-              >
-                Gallery
-              </Link>
-            </li> 
-
-            <li className='nav-item'>
-              <Link
-                to='/bookings'
-                className='nav-link text-white'
-                aria-current='page'
-                href='#'
-              >
-                Engage
-              </Link>
+              <Link to='/aboutus' className='nav-link text-white'>About Us</Link>
             </li>
-
             <li className='nav-item'>
-              <Link
-                to='/bookings'
-                className='nav-link text-white'
-                aria-current='page'
-                href='#'
-              >
-                Job Portal
-              </Link>
+              <Link to='/members' className='nav-link text-white'>Members</Link>
             </li>
-
             <li className='nav-item'>
-              <Link
-                to='/bookings'
-                className='nav-link text-white'
-                aria-current='page'
-                href='#'
-              >
-                Messages
-              </Link>
-            </li> 
-
-            <li className='nav-item'>
-              <Link
-                to='/bookings'
-                className='nav-link text-white'
-                aria-current='page'
-                href='#'
-              >
-                Notifications
-              </Link>
+              <Link to='/events' className='nav-link text-white'>Events</Link>
             </li>
-
             <li className='nav-item'>
-              <Link
-                to='/bookings'
-                className='nav-link text-white'
-                aria-current='page'
-                href='#'
-              >
-                Profile
-              </Link>
+              <Link to='/gallery' className='nav-link text-white'>Gallery</Link>
             </li>
-
-            </div>
-
-            <div className='nav-item button-container'>
-              <button className='logout-button  btn btn-danger'>
-              <Link
-                to='/landingpage'
-                className='nav-link logOutText text-white'
-                aria-current='page'
-                href='#'
-              >
-                Logout
-              </Link>
+            <li className='nav-item'>
+              <Link to='/engage' className='nav-link text-white'>Engage</Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/jobportal' className='nav-link text-white'>Job Section</Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/messages' className='nav-link text-white'>Messages</Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/notifications' className='nav-link text-white'>Notifications</Link>
+            </li>
+            <li className='nav-item'>
+              <Link to='/profile' className='nav-link text-white'>Profile</Link>
+            </li>
+            <li className='nav-item'>
+              <button className='logout-button btn btn-danger'>
+                <Link to='/landingpage' className='nav-link text-white'>Logout</Link>
               </button>
-              
-            </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

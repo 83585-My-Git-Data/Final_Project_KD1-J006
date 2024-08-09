@@ -1,4 +1,5 @@
 import Navbar from "../components/navbar"
+import Footer from "../components/footerComponent";
 
 function Gallery(){
     const images = [
@@ -18,22 +19,12 @@ function Gallery(){
         <div className="container mt-4">
           <h2 className="mb-3">Gallery</h2>
           <ul className="nav nav-tabs mb-3">
-            <li className="nav-item">
-              <a className="nav-link active" href="#">Option</a>
+          <li className="nav-item">
+              <a className="nav-link active" href="#">Album</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Option</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Option</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Option</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Option</a>
-            </li>
-          </ul>
+          </ul> 
+          
+         
           <div className="row">
             {images.map((image, index) => (
               <div key={index} className="col-md-3 mb-4">
@@ -42,6 +33,7 @@ function Gallery(){
             ))}
           </div>
         </div>
+        <Footer/>
         </div>
       );
 } 

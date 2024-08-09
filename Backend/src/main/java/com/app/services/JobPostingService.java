@@ -16,6 +16,7 @@ public interface JobPostingService {
 	    List<JobPostingDto> getJobPostingsByLocation(String jobLocation);
 	    List<JobPostingDto> getJobPostingsByDomainTag(String domainTag);
 	    List<JobPostingDto> getJobPostingsByUser(User user);
+	    JobPostingDto updateJobPostingById(Long jobPostingId, JobPostingDto jobPostingDto);
 	    
 }
 

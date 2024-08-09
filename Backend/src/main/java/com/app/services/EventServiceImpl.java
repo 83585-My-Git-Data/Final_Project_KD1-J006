@@ -65,5 +65,16 @@ public class EventServiceImpl implements EventService {
         return events.stream().map(this::mapToEventDTO).collect(Collectors.toList());
     }
 
+    @Override
+    public EventDTO updateEvent(Long eventId, EventDTO eventDTO) {
+        Optional<Event> eventOptional = eventDao.findById(eventId);
+        if (!eventOptional.isPresent()) {
+            throw new RuntimeException("Event not found with id: " + eventId);
+        }
+        Event existingEvent = eventOptional.get();
+        modelMapper.map(eventDTO, existingEvent);  // Update existing event with new details
+        Event updatedEvent = eventDao.save(existingEvent);
+        return mapToEventDTO(updatedEvent);
+    }
    
 }
