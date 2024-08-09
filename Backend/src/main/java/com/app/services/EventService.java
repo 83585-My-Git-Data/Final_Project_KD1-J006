@@ -17,6 +17,7 @@ public interface EventService {
 
     List<EventDTO> getAllEvents();
 
-    
+    EventDTO updateEvent(Long eventId, EventDTO eventDTO);
+
   
 }
