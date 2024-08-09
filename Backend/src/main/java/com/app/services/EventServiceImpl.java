@@ -52,4 +52,18 @@ public class EventServiceImpl implements EventService {
     private EventDTO mapToEventDTO(Event event) {
         return modelMapper.map(event, EventDTO.class);
     }
+
+     @Override
+    public List<EventDTO> searchEventsByName(String eventName) {
+        List<Event> events = eventDao.findByEventNameContainingIgnoreCase(eventName);
+        return events.stream().map(this::mapToEventDTO).collect(Collectors.toList());
+    }
+
+    @Override
+    public List<EventDTO> getAllEvents() {
+        List<Event> events = eventDao.findAll();
+        return events.stream().map(this::mapToEventDTO).collect(Collectors.toList());
+    }
+
+   
 }
