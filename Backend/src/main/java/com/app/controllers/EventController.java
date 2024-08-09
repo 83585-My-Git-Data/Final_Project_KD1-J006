@@ -40,4 +40,18 @@ public class EventController {
     }
 
     
+    @GetMapping("/search")
+    public ResponseEntity<List<EventDTO>> searchEvents(@RequestParam String name) {
+        List<EventDTO> events = eventService.searchEventsByName(name);
+        return ResponseEntity.ok(events);
+    }
+
+    @GetMapping("/all")
+    public ResponseEntity<List<EventDTO>> getAllEvents() {
+        List<EventDTO> events = eventService.getAllEvents();
+        return ResponseEntity.ok(events);
+    }
+
+
+    
 }
