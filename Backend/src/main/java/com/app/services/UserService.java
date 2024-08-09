@@ -12,6 +12,6 @@ public interface UserService {
 	 UserDTO registerAlumni(Long userId, AlumniDTO alumniDTO);
 	 void addAcademicDetails(Long alumniId, AcademicDetailsDTO academicDetailsDTO);
 	 UserDTO login(LoginRequestDTO loginRequest);
-	
+	 UserDTO updateUser(Long id, UserDTO userDTO);
 
 }
