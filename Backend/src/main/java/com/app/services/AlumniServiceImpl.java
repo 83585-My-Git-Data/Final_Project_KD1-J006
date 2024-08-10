@@ -52,6 +52,8 @@ public class AlumniServiceImpl implements AlumniService {
 	        return alumniUserList;
 	}
 
+<<<<<<< HEAD
+=======
 	@Override
 	public AlumniDTO updateAlumni(Long id, AlumniDTO alumniDTO) {
 		Alumni alumni = alumniDao.findById(id).orElseThrow(() -> new RuntimeException("Alumni not found"));
@@ -62,6 +64,7 @@ public class AlumniServiceImpl implements AlumniService {
         alumniDao.save(alumni);
         return modelmapper.map(alumni, AlumniDTO.class);
 	}
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
 	
 	}
     

@@ -17,8 +17,15 @@ import Gallery from './screens/Gallery'
 import Register2 from './screens/Register2'
 import Register3 from './screens/Register3'
 import Engage from './screens/Engage'
+<<<<<<< HEAD
+
+import MyJobsSection from './screens/MyJobSection'
+import JobSection from './screens/JobSection'
+import JobPostingPage from './screens/JobPostingPage'
+=======
 import JobPortal from './screens/JobSection'
 import MyJobsSection from './screens/MyJobSection'
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
 
 
 function App() {
@@ -38,8 +45,15 @@ function App() {
         <Route path='register2' element={<Register2 />} />
         <Route path='register3' element={<Register3 />} />
         <Route path='engage' element={<Engage />} />
+<<<<<<< HEAD
+        <Route path='jobsection' element={<JobSection />} />
+        <Route path='myjobsection' element={<MyJobsSection />} />
+        <Route path='jobpostingpage' element={<JobPostingPage />} />
+
+=======
         <Route path='jobportal' element={<JobPortal />} />
         <Route path='myjobsection' element={<MyJobsSection />} />
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
 
 
 
