@@ -33,7 +33,7 @@ function Navbar() {
               <Link to='/engage' className='nav-link text-white'>Engage</Link>
             </li>
             <li className='nav-item'>
-              <Link to='/jobportal' className='nav-link text-white'>Job Section</Link>
+              <Link to='/jobsection' className='nav-link text-white'>Job Section</Link>
             </li>
             <li className='nav-item'>
               <Link to='/messages' className='nav-link text-white'>Messages</Link>

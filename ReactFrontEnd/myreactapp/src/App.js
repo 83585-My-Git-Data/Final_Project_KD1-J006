@@ -17,8 +17,10 @@ import Gallery from './screens/Gallery'
 import Register2 from './screens/Register2'
 import Register3 from './screens/Register3'
 import Engage from './screens/Engage'
-import JobPortal from './screens/JobSection'
+
 import MyJobsSection from './screens/MyJobSection'
+import JobSection from './screens/JobSection'
+import JobPostingPage from './screens/JobPostingPage'
 
 
 function App() {
@@ -38,8 +40,10 @@ function App() {
         <Route path='register2' element={<Register2 />} />
         <Route path='register3' element={<Register3 />} />
         <Route path='engage' element={<Engage />} />
-        <Route path='jobportal' element={<JobPortal />} />
+        <Route path='jobsection' element={<JobSection />} />
         <Route path='myjobsection' element={<MyJobsSection />} />
+        <Route path='jobpostingpage' element={<JobPostingPage />} />
+
 
 
 
