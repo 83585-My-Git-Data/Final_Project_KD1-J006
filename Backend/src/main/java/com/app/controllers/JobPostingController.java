@@ -52,11 +52,27 @@ public class JobPostingController {
     public List<JobPostingDto> getJobPostingsByDomainTag(@RequestParam String domainTag) {
         return jobPostingService.getJobPostingsByDomainTag(domainTag);
     }
+<<<<<<< HEAD
   /*  
     @GetMapping("/searchByUser")
     public List<JobPostingDto> getJobPostingsByUser(@RequestParam Long userId) {
         User user = UserService.getUserById(userId); // Fetch the User entity from userId
         return jobPostingService.getJobPostingsByUser(user);
     }*/
+=======
+    
+   @GetMapping("/searchByUser")
+    public List<JobPostingDto> getJobPostingsByUser(@RequestParam Long userId) {
+        User user = userService.getUserById(userId); // Fetch the User entity from userId
+        return jobPostingService.getJobPostingsByUser(user);
+    }
+    
+    @PutMapping("/update/{jobPostingId}")
+    public ResponseEntity<JobPostingDto> updateJobPostingById(@PathVariable Long jobPostingId, 
+                                                              @RequestBody JobPostingDto jobPostingDto) {
+        JobPostingDto updatedJobPostingDto = jobPostingService.updateJobPostingById(jobPostingId, jobPostingDto);
+        return ResponseEntity.ok(updatedJobPostingDto);
+    }
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
     
 }

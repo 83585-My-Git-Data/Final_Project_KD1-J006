@@ -44,7 +44,14 @@ public class AlumniController {
 	        return alumniService.searchByJobRole(jobRole);
 	    }
 	
+<<<<<<< HEAD
 
+=======
+		@PutMapping("/{id}")
+	    public ResponseEntity<AlumniDTO> updateAlumni(@PathVariable Long id, @RequestBody AlumniDTO alumniDTO) {
+	        return ResponseEntity.ok(alumniService.updateAlumni(id, alumniDTO));
+	    }
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
 	
    
 }

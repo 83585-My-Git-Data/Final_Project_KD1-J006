@@ -76,6 +76,19 @@ public class UserServiceImpl implements UserService
 		
 	}
 
+<<<<<<< HEAD
 
+=======
+	@Override
+	public UserDTO updateUser(Long id, UserDTO userDTO) {
+		User user = userDao.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
+        modelmapper.map(userDTO, user);
+        // Prevent updating the id and role
+        user.setId(id);
+        user.setRole(user.getRole());
+        userDao.save(user);
+        return modelmapper.map(user, UserDTO.class);
+	}
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
 	
 }

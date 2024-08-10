@@ -95,6 +95,32 @@ public class JobPostingServiceImpl implements JobPostingService {
                 .map(this::toDto)
                 .collect(Collectors.toList());
     }
+<<<<<<< HEAD
+=======
+
+    @Override
+    public JobPostingDto updateJobPostingById(Long jobPostingId, JobPostingDto jobPostingDto) {
+        // Fetch the existing job posting by ID
+        Optional<JobPosting> optionalJobPosting = jobPostingDao.findById(jobPostingId);
+
+        if (optionalJobPosting.isPresent()) {
+            JobPosting jobPosting = optionalJobPosting.get();
+
+            // Preserve the original ID and map the DTO to the entity
+            modelMapper.map(jobPostingDto, jobPosting);
+            jobPosting.setId(jobPostingId);  // Ensure the ID remains the same
+
+            // Save the updated entity
+            JobPosting updatedJobPosting = jobPostingDao.save(jobPosting);
+
+            // Return the updated JobPostingDto
+            return modelMapper.map(updatedJobPosting, JobPostingDto.class);
+        } else {
+            throw new RuntimeException("Job posting not found.");
+        }
+    }
+
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
     
     private JobPostingDto toDto(JobPosting jobPosting) {
         return modelMapper.map(jobPosting, JobPostingDto.class);
