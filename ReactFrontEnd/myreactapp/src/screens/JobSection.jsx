@@ -14,17 +14,17 @@ function JobSection() {
       {
         id: 1,
         title: 'PHP Developer',
-        company: 'Company 1',
-        location: 'Location 1',
-        area: 'IT/ Management',
+        companyName: 'Company 1',
+        jobLocation: 'Location 1',
+        domainTag: 'IT/ Management',
         skills: 'PHP, HTML, CSS, Bootstrap',
       },
       {
         id: 2,
         title: 'Software Developer',
-        company: 'Google',
-        location: 'Bangalore',
-        area: 'IT/ Management/Digital Marketing',
+        companyName: 'Google',
+        jobLocation: 'Bangalore',
+        domainTag: 'IT/ Management/Digital Marketing',
         skills: 'PHP, HTML, CSS, Bootstrap',
       },
       // Add more jobs as needed
@@ -39,7 +39,7 @@ function JobSection() {
       <div className="container mt-5 mb-5">
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h2>Job Section</h2>
-          <button className="btn btn-warning">Post a New Job</button>
+          <Link to='/jobpostingpage' className="btn btn-warning">Post a New Job</Link>
         </div>
 
         <div className="mb-3">
@@ -65,9 +65,9 @@ function JobSection() {
             <h5 className="card-header " style={{ backgroundColor: '#B4D4FF' }}>{job.title}</h5>
             <div className="card-body" style={{ backgroundColor: '#EEF5FF' }}>
               <p className="card-text">
-                <strong>Company :</strong> {job.company}<br />
-                <strong>Job Location :</strong> {job.location}<br />
-                <strong>Job Area :</strong> {job.area}<br />
+                <strong>Company Name :</strong> {job.companyName}<br />
+                <strong>Job Location :</strong> {job.jobLocation}<br />
+                <strong>Domain Tag :</strong> {job.domainTag}<br />
                 <strong>Skills :</strong> {job.skills}
               </p>
               <div className="d-flex justify-content-end">

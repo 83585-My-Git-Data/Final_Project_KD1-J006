@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from '../components/navbar';
 import Footer from '../components/footerComponent';
+import { Link } from 'react-router-dom';
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 function MyJobsSection() {
@@ -36,6 +37,11 @@ function MyJobsSection() {
     <div>
         <Navbar/>
     <div className="container mt-4">
+    <div className='mt-5'>
+      <Link to='/jobsection' className='btn btn-info mt-5'>Back</Link>
+
+    </div>
+    <br/>
       <h2>My Jobs ({myJobs.length})</h2>
       
       {/* Rendering job cards dynamically */}
@@ -55,6 +61,8 @@ function MyJobsSection() {
         </div>
       ))}
     </div>
+    <br/>
+    <br/>
     <Footer/>
     </div>
   );
