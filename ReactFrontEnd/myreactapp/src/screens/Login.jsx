@@ -19,6 +19,22 @@ function Login() {
     } else if (password.length === 0) {
       toast.error('Please enter password');
     } else {
+<<<<<<< HEAD
+      // Uncomment the below code to handle actual login
+      const result = await login(email, password);
+      if (result && result.status === 'success') {
+        const data = result.data;
+
+        // Store the name and email in sessionStorage
+        sessionStorage.setItem('name', data.name);
+        sessionStorage.setItem('email', email);
+
+        toast.success('Successfully logged In');
+        navigate('/home');
+      } else {
+        toast.error(result ? result.error : 'Login failed');
+      }
+=======
       toast.success('Successfully logged In');
       navigate('/home');
       // Uncomment the below code to handle actual login
@@ -33,6 +49,7 @@ function Login() {
       // } else {
       //   toast.error(result['error']);
       // }
+>>>>>>> main
     }
   };
 

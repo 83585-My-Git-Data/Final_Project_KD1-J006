@@ -14,10 +14,11 @@ function JobSection() {
       {
         id: 1,
         title: 'PHP Developer',
-<<<<<<< HEAD
         companyName: 'Company 1',
         jobLocation: 'Location 1',
         domainTag: 'IT/ Management',
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
         companyName: 'Company 1',
@@ -29,15 +30,17 @@ function JobSection() {
         area: 'IT/ Management',
 >>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
 >>>>>>> main
+>>>>>>> main
         skills: 'PHP, HTML, CSS, Bootstrap',
       },
       {
         id: 2,
         title: 'Software Developer',
-<<<<<<< HEAD
         companyName: 'Google',
         jobLocation: 'Bangalore',
         domainTag: 'IT/ Management/Digital Marketing',
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
         companyName: 'Google',
@@ -48,6 +51,7 @@ function JobSection() {
         location: 'Bangalore',
         area: 'IT/ Management/Digital Marketing',
 >>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
+>>>>>>> main
 >>>>>>> main
         skills: 'PHP, HTML, CSS, Bootstrap',
       },
@@ -63,14 +67,16 @@ function JobSection() {
       <div className="container mt-5 mb-5">
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h2>Job Section</h2>
-<<<<<<< HEAD
           <Link to='/jobpostingpage' className="btn btn-warning">Post a New Job</Link>
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
           <Link to='/jobpostingpage' className="btn btn-warning">Post a New Job</Link>
 =======
           <button className="btn btn-warning">Post a New Job</button>
 >>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
+>>>>>>> main
 >>>>>>> main
         </div>
 
@@ -97,10 +103,11 @@ function JobSection() {
             <h5 className="card-header " style={{ backgroundColor: '#B4D4FF' }}>{job.title}</h5>
             <div className="card-body" style={{ backgroundColor: '#EEF5FF' }}>
               <p className="card-text">
-<<<<<<< HEAD
                 <strong>Company Name :</strong> {job.companyName}<br />
                 <strong>Job Location :</strong> {job.jobLocation}<br />
                 <strong>Domain Tag :</strong> {job.domainTag}<br />
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
                 <strong>Company Name :</strong> {job.companyName}<br />
@@ -112,10 +119,11 @@ function JobSection() {
                 <strong>Job Area :</strong> {job.area}<br />
 >>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
 >>>>>>> main
+>>>>>>> main
                 <strong>Skills :</strong> {job.skills}
               </p>
               <div className="d-flex justify-content-end">
-                <Link to={`/jobdetails/${job.id}`} className="btn " style={{ backgroundColor: '#B4D4FF' }}>View</Link>
+                <Link to={`/jobdescriptionpage/${job.id}`} className="btn " style={{ backgroundColor: '#B4D4FF' }}>View</Link>
               </div>
             </div>
           </div>

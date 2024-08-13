@@ -3,6 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { increment } from '../features/memberslice';
+import { register3 } from '../services/admin'; // Import the register3 function
 
 function Register3() {
   const [secondaryEducationCollege, setSecondaryEducationCollege] = useState('');
@@ -47,9 +48,40 @@ function Register3() {
     } else if (postgraduationPassoutYear.length === 0) {
       toast.error('Please enter postgraduation passout year');
     } else {
+<<<<<<< HEAD
+      try {
+        // Call the register3 API
+        const response = await register3(
+          secondaryEducationCollege,
+          secondaryEducationPercentage,
+          secondaryEducationPassoutYear,
+          higherSecondaryEducationCollege,
+          higherSecondaryEducationPercentage,
+          higherSecondaryEducationPassoutYear,
+          graduationCourse,
+          graduationPercentage,
+          graduationPassoutYear,
+          postgraduationCourse,
+          postgraduationPercentage,
+          postgraduationPassoutYear
+        );
+
+        if (response) {
+          dispatch(increment());
+          toast.success('Successfully registered a new user');
+          navigate('/login');
+        } else {
+          toast.error('Registration failed. Please try again.');
+        }
+      } catch (error) {
+        toast.error('An error occurred during registration. Please try again.');
+        console.error('Registration error:', error);
+      }
+=======
       dispatch(increment());
       toast.success('Successfully registered a new user');
       navigate('/login');
+>>>>>>> main
     }
   };
 

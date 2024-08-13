@@ -1,6 +1,22 @@
-import axios from 'axios'
-import { config } from './config'
+import axios from 'axios';
+import { config } from './config';
 
+<<<<<<< HEAD
+export async function register(firstName, lastName, email, password, contact, role) {
+  try {
+    const body = { firstName, lastName, email, password, contact, role: role.toUpperCase() }; // Ensure role is uppercase
+
+    const response = await axios.post(
+      `${config.serverUrl}/admin/register`,
+      body,
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        // withCredentials: true  // Include this if your backend expects credentials
+      }
+    );
+=======
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -47,37 +63,63 @@ export async function register2(batch, address, course, jobRole, dob, experience
     return response.data
 <<<<<<< HEAD
 =======
+>>>>>>> main
 
-  }catch(ex){
-    console.log(`exception:`,ex)
+    return response.data;
+  } catch (ex) {
+    console.error('exception: ', ex);
+    return null;
   }
-  return null
 }
 
-export async function register3(secondaryEducationCollege, secondaryEducationPercentage,secondaryEducationPassoutYear,higherSecondaryEducationCollege, higherSecondaryEducationPercentage,
-                                higherSecondaryEducationPassoutYear, graduationCourse, graduationPercentage,graduationPassoutYear,postgraduationCourse,postgraduationPercentage,postgraduationPassoutYear ){
-  try{
-    const body = {secondaryEducationCollege, secondaryEducationPercentage, secondaryEducationPassoutYear, higherSecondaryEducationCollege, higherSecondaryEducationPercentage,higherSecondaryEducationPassoutYear,
-                  graduationCourse,graduationPercentage, graduationPassoutYear,postgraduationCourse,postgraduationPercentage,postgraduationPassoutYear}
+
+export async function register2(userId, batch, address, course, jobRole, dob, experienceLevel, gender, placementStatus, companyName) {
+  try {
+    const body = { batch, address, course, jobRole, dob, experienceLevel, gender, placementStatus, companyName };
     const response = await axios.post(
-      `${config.serverUrl}/admin/register3`,body
-    )
-    return response.data
-  }catch(ex){
-    console.log(`exception:`,ex)
-  }  
-  return null                              
+      `${config.serverUrl}/admin/register2/${userId}`, // Use userId in URL
+      body,
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+    return response.data;
+  } catch (ex) {
+    console.log('Exception:', ex);
+    return null;
+  }
 }
 
+
+export async function register3(secondaryEducationCollege, secondaryEducationPercentage, secondaryEducationPassoutYear, higherSecondaryEducationCollege, higherSecondaryEducationPercentage,
+  higherSecondaryEducationPassoutYear, graduationCourse, graduationPercentage, graduationPassoutYear, postgraduationCourse, postgraduationPercentage, postgraduationPassoutYear) {
+  try {
+    const body = { secondaryEducationCollege, secondaryEducationPercentage, secondaryEducationPassoutYear, higherSecondaryEducationCollege, higherSecondaryEducationPercentage, higherSecondaryEducationPassoutYear,
+      graduationCourse, graduationPercentage, graduationPassoutYear, postgraduationCourse, postgraduationPercentage, postgraduationPassoutYear };
+    const response = await axios.post(
+      `${config.serverUrl}/admin/register3`,
+      body
+    );
+    return response.data;
+  } catch (ex) {
+    console.log(`exception:`, ex);
+    return null;
+  }
+}
 
 export async function login(email, password) {
-  const body = { email, password }
+  const body = { email, password };
   try {
-    const response = await axios.post(`${config.serverUrl}/admin/login`, body)
-    return response.data
+    const response = await axios.post(`${config.serverUrl}/admin/login`, body);
+    return response.data;
   } catch (ex) {
-    console.log(`exception: `, ex)
+    console.log(`exception: `, ex);
+    return null;
   }
+<<<<<<< HEAD
+=======
 =======
 // export async function register2(batch, address, course, jobRole, dob, experienceLevel, gender, placementStatus, companyName){
 //   try{
@@ -130,4 +172,5 @@ export async function login(email, password) {
   //     .catch((error) => {
   //       console.log(error)
   //     })
+>>>>>>> main
 }

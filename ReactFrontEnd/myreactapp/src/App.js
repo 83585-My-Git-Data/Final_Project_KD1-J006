@@ -19,6 +19,13 @@ import Engage from "./screens/Engage";
 import MyJobsSection from "./screens/MyJobSection";
 import JobSection from "./screens/JobSection";
 import JobPostingPage from "./screens/JobPostingPage";
+import JobDescriptionPage from "./screens/JobDescriptiptionPage";
+import AlumniProfile from "./screens/AlumniProfile";
+=======
+<<<<<<< HEAD
+import MyJobsSection from "./screens/MyJobSection";
+import JobSection from "./screens/JobSection";
+import JobPostingPage from "./screens/JobPostingPage";
 import AdminGallery from "./screens/AdminScreens/AdminGallery";
 =======
 import Login from './screens/Login'
@@ -45,12 +52,16 @@ import MyJobsSection from './screens/MyJobSection'
 >>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
 
 >>>>>>> main
+>>>>>>> main
 
 function App() {
   return (
     <div className="container-fluid">
       <Routes>
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
         <Route path="" element={<LandingPage />} />
         <Route path="landingpage" element={<LandingPage />} />
         <Route path="login" element={<Login />} />
@@ -66,6 +77,13 @@ function App() {
         <Route path="jobsection" element={<JobSection />} />
         <Route path="myjobsection" element={<MyJobsSection />} />
         <Route path="jobpostingpage" element={<JobPostingPage />} />
+<<<<<<< HEAD
+        <Route path="jobdescriptionpage/:id" element={<JobDescriptionPage />} />
+        <Route path="alumniprofile" element={<AlumniProfile />} />
+
+        
+
+=======
         <Route path="admingallery" element={<AdminGallery />} />
 =======
 
@@ -105,6 +123,7 @@ function App() {
 
 
 
+>>>>>>> main
 >>>>>>> main
       </Routes>
       <ToastContainer />
