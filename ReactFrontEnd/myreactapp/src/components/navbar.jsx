@@ -17,6 +17,13 @@ function Navbar() {
   return (
     <nav className='navbar navbar-expand-lg bg-dark bg-gradient py-3'>
       <div className='container-fluid'>
+<<<<<<< HEAD
+=======
+        {/* Navbar Brand (You can uncomment the brand link if needed) */}
+        {/* <Link className='navbar-brand text-white' to='/'>
+          MyAlumniPortal
+        </Link> */}
+>>>>>>> main
         <div className='ms-2'>
           <img src="./AlumniAssociationBgless.png" style={{ width: 60, height: 70 }} alt="Alumni Logo" />
         </div>
@@ -48,6 +55,19 @@ function Navbar() {
             </li>
             <li className='nav-item'>
               <Link to='/jobsection' className='nav-link text-white'>Job Section</Link>
+<<<<<<< HEAD
+=======
+=======
+<<<<<<< HEAD
+              <Link to='/jobsection' className='nav-link text-white'>Job Section</Link>
+=======
+              <Link to='/jobportal' className='nav-link text-white'>Job Section</Link>
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
+>>>>>>> main
+            </li>
+            <li className='nav-item'>
+              <Link to='/messages' className='nav-link text-white'>Messages</Link>
+>>>>>>> main
             </li>
             <li className='nav-item'>
               <Link to='/notifications' className='nav-link text-white'>Notifications</Link>

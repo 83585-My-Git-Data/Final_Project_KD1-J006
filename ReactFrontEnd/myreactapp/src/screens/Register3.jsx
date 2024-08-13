@@ -48,6 +48,7 @@ function Register3() {
     } else if (postgraduationPassoutYear.length === 0) {
       toast.error('Please enter postgraduation passout year');
     } else {
+<<<<<<< HEAD
       try {
         // Call the register3 API
         const response = await register3(
@@ -76,6 +77,11 @@ function Register3() {
         toast.error('An error occurred during registration. Please try again.');
         console.error('Registration error:', error);
       }
+=======
+      dispatch(increment());
+      toast.success('Successfully registered a new user');
+      navigate('/login');
+>>>>>>> main
     }
   };
 

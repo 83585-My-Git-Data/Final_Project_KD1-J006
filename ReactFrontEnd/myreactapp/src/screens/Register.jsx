@@ -3,7 +3,10 @@ import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { increment } from '../features/memberslice';
+<<<<<<< HEAD
 import { register } from '../services/admin'; // Import the register function from your API
+=======
+>>>>>>> main
 import './Styles/Register.css'; // Import custom CSS for any additional styling
 
 function Register() {
@@ -34,6 +37,7 @@ function Register() {
     } else if (contact.length === 0) {
       toast.error('Please enter Contact number');
     } else {
+<<<<<<< HEAD
       const result = await register(firstName, lastName, email, password, contact, role);
       if (result) {
         const userId = result.data.id; // Assuming the ID is returned as part of the result
@@ -44,6 +48,11 @@ function Register() {
       } else {
         toast.error('Registration failed!');
       }
+=======
+      dispatch(increment());
+      // toast.success('Successfully registered a new user');
+      navigate('/register2');
+>>>>>>> main
     }
   };
 
@@ -116,6 +125,7 @@ function Register() {
           <div className="mb-3">
             <label htmlFor="role" className="form-label">Role</label>
             <select
+<<<<<<< HEAD
               onChange={(e) => setRole(e.target.value.toUpperCase())}
               className="form-control"
               id="role"
@@ -126,6 +136,18 @@ function Register() {
             </select>
           </div>
           <button onClick={handleRegister} className="btn btn-primary w-100">Next</button>
+=======
+              onChange={(e) => setRole(e.target.value)}
+              className="form-control"
+              id="role"
+              value="Alumni"
+              disabled
+            >
+              <option value="Alumni">Alumni</option>
+            </select>
+          </div>
+          <button onClick={onRegister} className="btn btn-primary w-100">Next</button>
+>>>>>>> main
           <div className="text-center mt-3">
             Already have an account? <Link to="/login">Login here</Link>
           </div>
