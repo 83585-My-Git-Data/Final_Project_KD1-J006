@@ -39,7 +39,15 @@ function Navbar() {
               <Link to='/engage' className='nav-link text-white'>Engage</Link>
             </li>
             <li className='nav-item'>
+<<<<<<< HEAD
               <Link to='/jobsection' className='nav-link text-white'>Job Section</Link>
+=======
+<<<<<<< HEAD
+              <Link to='/jobsection' className='nav-link text-white'>Job Section</Link>
+=======
+              <Link to='/jobportal' className='nav-link text-white'>Job Section</Link>
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
+>>>>>>> main
             </li>
             <li className='nav-item'>
               <Link to='/messages' className='nav-link text-white'>Messages</Link>

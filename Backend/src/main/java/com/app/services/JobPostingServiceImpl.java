@@ -95,6 +95,8 @@ public class JobPostingServiceImpl implements JobPostingService {
                 .map(this::toDto)
                 .collect(Collectors.toList());
     }
+<<<<<<< HEAD
+=======
 
     @Override
     public JobPostingDto updateJobPostingById(Long jobPostingId, JobPostingDto jobPostingDto) {
@@ -118,6 +120,7 @@ public class JobPostingServiceImpl implements JobPostingService {
         }
     }
 
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
     
     private JobPostingDto toDto(JobPosting jobPosting) {
         return modelMapper.map(jobPosting, JobPostingDto.class);

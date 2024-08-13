@@ -14,17 +14,41 @@ function JobSection() {
       {
         id: 1,
         title: 'PHP Developer',
+<<<<<<< HEAD
         companyName: 'Company 1',
         jobLocation: 'Location 1',
         domainTag: 'IT/ Management',
+=======
+<<<<<<< HEAD
+        companyName: 'Company 1',
+        jobLocation: 'Location 1',
+        domainTag: 'IT/ Management',
+=======
+        company: 'Company 1',
+        location: 'Location 1',
+        area: 'IT/ Management',
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
+>>>>>>> main
         skills: 'PHP, HTML, CSS, Bootstrap',
       },
       {
         id: 2,
         title: 'Software Developer',
+<<<<<<< HEAD
         companyName: 'Google',
         jobLocation: 'Bangalore',
         domainTag: 'IT/ Management/Digital Marketing',
+=======
+<<<<<<< HEAD
+        companyName: 'Google',
+        jobLocation: 'Bangalore',
+        domainTag: 'IT/ Management/Digital Marketing',
+=======
+        company: 'Google',
+        location: 'Bangalore',
+        area: 'IT/ Management/Digital Marketing',
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
+>>>>>>> main
         skills: 'PHP, HTML, CSS, Bootstrap',
       },
       // Add more jobs as needed
@@ -39,7 +63,15 @@ function JobSection() {
       <div className="container mt-5 mb-5">
         <div className="d-flex justify-content-between align-items-center mb-3">
           <h2>Job Section</h2>
+<<<<<<< HEAD
           <Link to='/jobpostingpage' className="btn btn-warning">Post a New Job</Link>
+=======
+<<<<<<< HEAD
+          <Link to='/jobpostingpage' className="btn btn-warning">Post a New Job</Link>
+=======
+          <button className="btn btn-warning">Post a New Job</button>
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
+>>>>>>> main
         </div>
 
         <div className="mb-3">
@@ -65,9 +97,21 @@ function JobSection() {
             <h5 className="card-header " style={{ backgroundColor: '#B4D4FF' }}>{job.title}</h5>
             <div className="card-body" style={{ backgroundColor: '#EEF5FF' }}>
               <p className="card-text">
+<<<<<<< HEAD
                 <strong>Company Name :</strong> {job.companyName}<br />
                 <strong>Job Location :</strong> {job.jobLocation}<br />
                 <strong>Domain Tag :</strong> {job.domainTag}<br />
+=======
+<<<<<<< HEAD
+                <strong>Company Name :</strong> {job.companyName}<br />
+                <strong>Job Location :</strong> {job.jobLocation}<br />
+                <strong>Domain Tag :</strong> {job.domainTag}<br />
+=======
+                <strong>Company :</strong> {job.company}<br />
+                <strong>Job Location :</strong> {job.location}<br />
+                <strong>Job Area :</strong> {job.area}<br />
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
+>>>>>>> main
                 <strong>Skills :</strong> {job.skills}
               </p>
               <div className="d-flex justify-content-end">

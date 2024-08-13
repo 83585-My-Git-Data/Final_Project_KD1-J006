@@ -44,6 +44,10 @@ function JobPostingPage() {
             toast.error('Please enter Job Application End Date');
         } else {
             // Proceed with form submission
+<<<<<<< HEAD
+=======
+            // Assuming submission is successful
+>>>>>>> main
             toast.success('Job posted successfully!');
             navigate('/myjobsection');
         }
@@ -52,6 +56,7 @@ function JobPostingPage() {
     return (
         <div>
             <Navbar />
+<<<<<<< HEAD
             <div className="container mt-5 mb-5">
                 <div className="card shadow-lg p-4">
                     <div className="d-flex justify-content-between">
@@ -184,6 +189,140 @@ function JobPostingPage() {
                                 Submit
                             </button>
                         </div>
+=======
+            <br/>
+            <div className="container mt-5">
+                <div className="d-flex justify-content-between">
+                    <h2 className="mb-4">Post a New Job</h2>
+                    <button onClick={() => navigate(-1)} className="btn btn-secondary mb-3">
+                        Back
+                    </button>
+                </div>
+                <div className="row g-3">
+                    <div className="col-md-6">
+                        <label htmlFor="id" className="form-label">Enter your ID</label>
+                        <input
+                            onChange={(e) => setId(e.target.value)}
+                            type="number"
+                            className="form-control"
+                            placeholder="Enter your ID"
+                            value={id}
+                        />
+                    </div>
+                    <div className="col-md-6">
+                        <label htmlFor="companyName" className="form-label">Company Name</label>
+                        <input
+                            onChange={(e) => setCompanyName(e.target.value)}
+                            type="text"
+                            className="form-control"
+                            placeholder="Enter Company Name"
+                            value={companyName}
+                        />
+                    </div>
+                    <div className="col-md-6">
+                        <label htmlFor="jobRole" className="form-label">Job Role</label>
+                        <input
+                            onChange={(e) => setJobRole(e.target.value)}
+                            type="text"
+                            className="form-control"
+                            placeholder="Enter Job Role"
+                            value={jobRole}
+                        />
+                    </div>
+                    <div className="col-md-6">
+                        <label htmlFor="jobLocation" className="form-label">Job Location</label>
+                        <input
+                            onChange={(e) => setJobLocation(e.target.value)}
+                            type="text"
+                            className="form-control"
+                            placeholder="Enter Job Location"
+                            value={jobLocation}
+                        />
+                    </div>
+                    <div className="col-md-6">
+                        <label htmlFor="experienceLevel" className="form-label">Experience Level</label>
+                        <input
+                            onChange={(e) => setExperienceLevel(e.target.value)}
+                            type="number"
+                            className="form-control"
+                            placeholder="Enter Experience Level"
+                            value={experienceLevel}
+                        />
+                    </div>
+                    <div className="col-md-6">
+                        <label htmlFor="workMode" className="form-label">Work Mode</label>
+                        <select
+                            onChange={(e) => setWorkMode(e.target.value)}
+                            className="form-select"
+                            value={workMode}
+                        >
+                            <option value="" disabled>Select Work Mode</option>
+                            <option value="Office">Work from Office</option>
+                            <option value="Home">Work from Home</option>
+                            <option value="Hybrid">Hybrid Mode</option>
+                        </select>
+                    </div>
+                    <div className="col-md-6">
+                        <label htmlFor="salaryPackage" className="form-label">Salary Package</label>
+                        <input
+                            onChange={(e) => setSalaryPackage(e.target.value)}
+                            type="number"
+                            className="form-control"
+                            placeholder="Enter Salary Package"
+                            value={salaryPackage}
+                            min="0"
+                        />
+                    </div>
+                    <div className="col-md-6">
+                        <label htmlFor="domainTag" className="form-label">Domain Tag</label>
+                        <input
+                            onChange={(e) => setDomainTag(e.target.value)}
+                            type="text"
+                            className="form-control"
+                            placeholder="Enter Job Domain"
+                            value={domainTag}
+                        />
+                    </div>
+                    <div className="col-md-6">
+                        <label htmlFor="postingDate" className="form-label">Job Posting Date</label>
+                        <input
+                            onChange={(e) => setPostingDate(e.target.value)}
+                            type="date"
+                            className="form-control"
+                            placeholder="Enter Job Posting Date"
+                            value={postingDate}
+                            pattern="\d{4}-\d{2}-\d{2}"
+                        />
+                    </div>
+                    <div className="col-md-6">
+                        <label htmlFor="applicationEndDate" className="form-label">Job Application End Date</label>
+                        <input
+                            onChange={(e) => setApplicationEndDate(e.target.value)}
+                            type="date"
+                            className="form-control"
+                            placeholder="Enter Job Application End Date"
+                            value={applicationEndDate}
+                            pattern="\d{4}-\d{2}-\d{2}"
+                        />
+                    </div>
+                    <div className="col-12">
+                        <label htmlFor="jobDescription" className="form-label">Job Description</label>
+                        <textarea
+                            onChange={(e) => {
+                                const value = e.target.value;
+                                setJobDescription(value);
+                            }}
+                            className="form-control"
+                            placeholder="Enter job description along with the Job Application Link (If link not found, form will not get submitted !!)"
+                            value={jobDescription}
+                            rows="4"
+                        />
+                    </div>
+                    <div className="col-12 d-flex justify-content-end mb-5">
+                        <button onClick={onSubmitJob} className="btn btn-primary mt-3">
+                            Submit
+                        </button>
+>>>>>>> main
                     </div>
                 </div>
             </div>

@@ -16,7 +16,10 @@ public interface JobPostingService {
 	    List<JobPostingDto> getJobPostingsByLocation(String jobLocation);
 	    List<JobPostingDto> getJobPostingsByDomainTag(String domainTag);
 	    List<JobPostingDto> getJobPostingsByUser(User user);
+<<<<<<< HEAD
+=======
 	    JobPostingDto updateJobPostingById(Long jobPostingId, JobPostingDto jobPostingDto);
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
 	    
 }
 

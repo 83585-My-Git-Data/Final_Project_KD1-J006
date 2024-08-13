@@ -65,6 +65,8 @@ public class EventServiceImpl implements EventService {
         return events.stream().map(this::mapToEventDTO).collect(Collectors.toList());
     }
 
+<<<<<<< HEAD
+=======
     @Override
     public EventDTO updateEvent(Long eventId, EventDTO eventDTO) {
         Optional<Event> eventOptional = eventDao.findById(eventId);
@@ -76,5 +78,6 @@ public class EventServiceImpl implements EventService {
         Event updatedEvent = eventDao.save(existingEvent);
         return mapToEventDTO(updatedEvent);
     }
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
    
 }

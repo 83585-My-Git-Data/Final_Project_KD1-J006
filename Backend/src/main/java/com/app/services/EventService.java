@@ -17,7 +17,12 @@ public interface EventService {
 
     List<EventDTO> getAllEvents();
 
+<<<<<<< HEAD
+
+   
+=======
     EventDTO updateEvent(Long eventId, EventDTO eventDTO);
 
   
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
 }

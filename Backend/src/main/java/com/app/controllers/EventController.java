@@ -52,6 +52,8 @@ public class EventController {
         return ResponseEntity.ok(events);
     }
 
+<<<<<<< HEAD
+=======
     @PutMapping("/update")  
     public ResponseEntity<EventDTO> updateEvent(@RequestParam Long eventId,
                                                 @RequestBody @Valid EventDTO eventDTO) {
@@ -59,6 +61,7 @@ public class EventController {
         return ResponseEntity.ok(updatedEvent);
     }
 
+>>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
 
     
 }
