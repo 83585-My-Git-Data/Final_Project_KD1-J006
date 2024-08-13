@@ -4,7 +4,11 @@ import Footer from '../components/footerComponent';
 <<<<<<< HEAD
 import { Link } from 'react-router-dom';
 =======
+<<<<<<< HEAD
+import { Link } from 'react-router-dom';
+=======
 >>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
+>>>>>>> main
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 function MyJobsSection() {
@@ -41,13 +45,19 @@ function MyJobsSection() {
         <Navbar/>
     <div className="container mt-4">
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> main
     <div className='mt-5'>
       <Link to='/jobsection' className='btn btn-info mt-5'>Back</Link>
 
     </div>
     <br/>
+<<<<<<< HEAD
+=======
 =======
 >>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
+>>>>>>> main
       <h2>My Jobs ({myJobs.length})</h2>
       
       {/* Rendering job cards dynamically */}
@@ -71,7 +81,12 @@ function MyJobsSection() {
     <br/>
     <br/>
 =======
+<<<<<<< HEAD
+    <br/>
+    <br/>
+=======
 >>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
+>>>>>>> main
     <Footer/>
     </div>
   );

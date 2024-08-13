@@ -18,17 +18,17 @@
 
 } 
 
-.car-event-container{
+/* .car-event-container{
     background-color: beige;
-}
+} */
 
-.home-text{
+/* .home-text{
     background-color: beige;
-}
+} */
 
 .event-image-container{
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .bg-image{
@@ -69,7 +69,8 @@
 } 
 
 .members-container{
-    background-color: #d8d8d893;
+
+    /* background-color: #d8d8d893; */
     height: auto; 
     /* margin-bottom: 50px; */
     padding-bottom: 100px;
