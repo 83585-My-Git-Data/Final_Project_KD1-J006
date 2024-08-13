@@ -1,0 +1,6 @@
+.login-page {
+    /* Uncomment the line below and add the path to your background image */
+    background-image: url('../Images/LoginBg.jpg');
+    background-size: cover;
+    background-position: center;
+  }

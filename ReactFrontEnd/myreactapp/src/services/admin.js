@@ -1,121 +1,72 @@
-import axios from 'axios'
-import { config } from './config'
+import axios from 'axios';
+import { config } from './config';
 
-<<<<<<< HEAD
-export async function register(firstName, lastName, email, password,contact,role) {
+export async function register(firstName, lastName, email, password, contact, role) {
   try {
-    // post body
-    const body = { firstName, lastName, email, password,contact,role }
-=======
-// export async function register(firstName, lastName, email, password,contact,role) {
-//   try {
-//     // post body
-//     const body = { firstName, lastName, email, password,contact,role }
->>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
+    const body = { firstName, lastName, email, password, contact, role: role.toUpperCase() }; // Ensure role is uppercase
 
-//     // send the post request
-//     const response = await axios.post(
-//       `${config.serverUrl}/admin/register`,
-//       body
-//     )
-
-//     // return the json body from response object
-//     return response.data
-//   } catch (ex) {
-//     console.log(`exception: `, ex)
-//   }
-
-//   return null
-// }
-
-<<<<<<< HEAD
-export async function register2(batch, address, course, jobRole, dob, experienceLevel, gender, placementStatus, companyName){
-  try{
-    const body = {batch, address, course, jobRole, dob, experienceLevel, gender, placementStatus, companyName}
     const response = await axios.post(
-      `${config.serverUrl}/admin/register2`,body
-    )
-    return response.data
+      `${config.serverUrl}/admin/register`,
+      body,
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        // withCredentials: true  // Include this if your backend expects credentials
+      }
+    );
 
-  }catch(ex){
-    console.log(`exception:`,ex)
+    return response.data;
+  } catch (ex) {
+    console.error('exception: ', ex);
+    return null;
   }
-  return null
 }
 
-export async function register3(secondaryEducationCollege, secondaryEducationPercentage,secondaryEducationPassoutYear,higherSecondaryEducationCollege, higherSecondaryEducationPercentage,
-                                higherSecondaryEducationPassoutYear, graduationCourse, graduationPercentage,graduationPassoutYear,postgraduationCourse,postgraduationPercentage,postgraduationPassoutYear ){
-  try{
-    const body = {secondaryEducationCollege, secondaryEducationPercentage, secondaryEducationPassoutYear, higherSecondaryEducationCollege, higherSecondaryEducationPercentage,higherSecondaryEducationPassoutYear,
-                  graduationCourse,graduationPercentage, graduationPassoutYear,postgraduationCourse,postgraduationPercentage,postgraduationPassoutYear}
+
+export async function register2(userId, batch, address, course, jobRole, dob, experienceLevel, gender, placementStatus, companyName) {
+  try {
+    const body = { batch, address, course, jobRole, dob, experienceLevel, gender, placementStatus, companyName };
     const response = await axios.post(
-      `${config.serverUrl}/admin/register3`,body
-    )
-    return response.data
-  }catch(ex){
-    console.log(`exception:`,ex)
-  }  
-  return null                              
+      `${config.serverUrl}/admin/register2/${userId}`, // Use userId in URL
+      body,
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+    return response.data;
+  } catch (ex) {
+    console.log('Exception:', ex);
+    return null;
+  }
 }
 
+
+export async function register3(secondaryEducationCollege, secondaryEducationPercentage, secondaryEducationPassoutYear, higherSecondaryEducationCollege, higherSecondaryEducationPercentage,
+  higherSecondaryEducationPassoutYear, graduationCourse, graduationPercentage, graduationPassoutYear, postgraduationCourse, postgraduationPercentage, postgraduationPassoutYear) {
+  try {
+    const body = { secondaryEducationCollege, secondaryEducationPercentage, secondaryEducationPassoutYear, higherSecondaryEducationCollege, higherSecondaryEducationPercentage, higherSecondaryEducationPassoutYear,
+      graduationCourse, graduationPercentage, graduationPassoutYear, postgraduationCourse, postgraduationPercentage, postgraduationPassoutYear };
+    const response = await axios.post(
+      `${config.serverUrl}/admin/register3`,
+      body
+    );
+    return response.data;
+  } catch (ex) {
+    console.log(`exception:`, ex);
+    return null;
+  }
+}
 
 export async function login(email, password) {
-  const body = { email, password }
+  const body = { email, password };
   try {
-    const response = await axios.post(`${config.serverUrl}/admin/login`, body)
-    return response.data
+    const response = await axios.post(`${config.serverUrl}/admin/login`, body);
+    return response.data;
   } catch (ex) {
-    console.log(`exception: `, ex)
+    console.log(`exception: `, ex);
+    return null;
   }
-=======
-// export async function register2(batch, address, course, jobRole, dob, experienceLevel, gender, placementStatus, companyName){
-//   try{
-//     const body = {batch, address, course, jobRole, dob, experienceLevel, gender, placementStatus, companyName}
-//     const response = await axios.post(
-//       `${config.serverUrl}/admin/register2`,body
-//     )
-//     return response.data
->>>>>>> 7d510b2f97284bef9a4323c3a67f35ec70898990
-
-//   }catch(ex){
-//     console.log(`exception:`,ex)
-//   }
-//   return null
-// }
-
-// export async function register3(secondaryEducationCollege, secondaryEducationPercentage,secondaryEducationPassoutYear,higherSecondaryEducationCollege, higherSecondaryEducationPercentage,
-//                                 higherSecondaryEducationPassoutYear, graduationCourse, graduationPercentage,graduationPassoutYear,postgraduationCourse,postgraduationPercentage,postgraduationPassoutYear ){
-//   try{
-//     const body = {secondaryEducationCollege, secondaryEducationPercentage, secondaryEducationPassoutYear, higherSecondaryEducationCollege, higherSecondaryEducationPercentage,higherSecondaryEducationPassoutYear,
-//                   graduationCourse,graduationPercentage, graduationPassoutYear,postgraduationCourse,postgraduationPercentage,postgraduationPassoutYear}
-//     const response = await axios.post(
-//       `${config.serverUrl}/admin/register3`,body
-//     )
-//     return response.data
-//   }catch(ex){
-//     console.log(`exception:`,ex)
-//   }  
-//   return null                              
-// }
-
-
-// export async function login(email, password) {
-//   const body = { email, password }
-//   try {
-//     const response = await axios.post(`${config.serverUrl}/admin/login`, body)
-//     return response.data
-//   } catch (ex) {
-//     console.log(`exception: `, ex)
-//   }
-
-//   return null
-//   //   axios
-//   //     .post(`${config.serverUrl}/admin/login`, body)
-//   //     .then((response) => {
-//   //       console.log(response.data)
-//   //       return response.data
-//   //     })
-//   //     .catch((error) => {
-//   //       console.log(error)
-//   //     })
-// }
+}
